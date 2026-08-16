@@ -1,25 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Cash</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Cash Demo</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+}
+
+header{
+  background:#173f8a;
+  color:white;
+  padding:22px;
+  text-align:center;
+}
+
+.container{
+  padding:20px;
+  max-width:500px;
+  margin:auto;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:16px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.balance{
+  font-size:32px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:0;
+  border-radius:10px;
+  background:#173f8a;
+  color:white;
+  font-size:16px;
+  margin-top:10px;
+}
+
+button:active{
+  transform:scale(.98);
+}
+
+.nav{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-top:20px;
+}
+
+.nav button{
+  font-size:12px;
+  padding:12px 4px;
+}
+
+.small{
+  color:#667085;
+  font-size:14px;
+}
+
+#message{
+  margin-top:15px;
+  font-weight:bold;
+  text-align:center;
+}
+</style>
 </head>
+
 <body>
 
+<header>
   <h1>Daily Cash</h1>
-  <p>Welcome to Daily Cash</p>
+  <p>Demo Wallet</p>
+</header>
 
-  <button onclick="showMessage()">Get Started</button>
+<div class="container">
 
-  <p id="message"></p>
+  <div class="card">
+    <div class="small">Demo Balance</div>
+    <div class="balance">ETB 0.00</div>
+    <button onclick="showMessage()">Get Started</button>
+    <div id="message"></div>
+  </div>
 
-  <script>
-    function showMessage() {
-      document.getElementById("message").innerText =
-        "Welcome! Your Daily Cash page is working.";
-    }
-  </script>
+  <div class="card">
+    <h2>Tasks</h2>
+    <p class="small">Complete demo tasks to test the website.</p>
+    <button onclick="taskMessage()">View Tasks</button>
+  </div>
+
+  <div class="card">
+    <h2>Withdraw</h2>
+    <p class="small">Withdrawal is disabled in this demo.</p>
+    <button onclick="withdrawMessage()">Withdraw</button>
+  </div>
+
+  <div class="nav">
+    <button onclick="home()">🏠 Home</button>
+    <button onclick="taskMessage()">📋 Tasks</button>
+    <button onclick="withdrawMessage()">💳 Withdraw</button>
+    <button onclick="profile()">👤 Profile</button>
+  </div>
+
+</div>
+
+<script>
+function showMessage(){
+  document.getElementById("message").innerText =
+  "Welcome! Your Daily Cash demo is working.";
+}
+
+function taskMessage(){
+  document.getElementById("message").innerText =
+  "Demo tasks will appear here.";
+}
+
+function withdrawMessage(){
+  document.getElementById("message").innerText =
+  "Withdrawal is disabled in this demo.";
+}
+
+function home(){
+  window.scrollTo(0,0);
+}
+
+function profile(){
+  document.getElementById("message").innerText =
+  "Demo profile.";
+}
+</script>
 
 </body>
 </html>
