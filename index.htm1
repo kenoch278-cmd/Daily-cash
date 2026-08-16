@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Cash</title>
+</head>
+<body>
+
+  <h1>Daily Cash</h1>
+  <p>Welcome to Daily Cash</p>
+
+  <button onclick="showMessage()">Get Started</button>
+
+  <p id="message"></p>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").innerText =
+        "Welcome! Your Daily Cash page is working.";
+    }
+  </script>
+
+</body>
+</html>
